@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  db:
+    container_name: jruiz-mysql-app
+    image: mysql:5.7
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_USER=t_usr
+      - MYSQL_PASSWORD=jruizdev 
+      - MYSQL_DATABASE=employees_db
+    restart: always
+    ports:
+      - '3308:3306'
